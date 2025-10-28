@@ -1,17 +1,22 @@
 #include <string>
 #include <map>
+#include <unordered_map>
+#include <vector>
 #include <random>
 using namespace std;
 
-class Inference
-{
+class Inference {
+public:
+    Inference(const unordered_map<string, map<char, int>>& data);
 
-    
-}
+    string generate(size_t length, size_t n);
 
+private:
+    unordered_map<string, vector<pair<char, int>>> transitions;
+    unordered_map<string, int> totalWeights;
+    mt19937 rng;
 
-//probability of observing character c given the preceding k-gram w
-
-// Let n(w, c) be the number of times character c follows k-gram w in the input
-// text, and let n(w) be the total number of occurrences of w. We then estimate
-// the conditional probability as:
+    char weighted_pick(const string& context);
+    char pick_next(string context);
+    string random_context();
+};
