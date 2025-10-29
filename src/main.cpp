@@ -17,7 +17,7 @@ string read_file(const string& filename) {
 
 int main(int argc, char *argv[]) {
     if (argc < 4) {
-        cerr << "Usage: " << argv[0] << "<ngram_length> <input_file> <output_length>\n";
+        cerr << "Usage: " << argv[0] << " <ngram_length> <input_file> <output_length>\n";
         return 1;
     }
 
