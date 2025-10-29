@@ -38,7 +38,7 @@ then run your training txt file and word size, and how many words you would like
 
 >./slm 2 ./text/ababac.txt 10
 
-slm <int #of_word_size> <string filename.txt> <int #of_characters>
+slm <int #of_word_size> string filename.txt <int #of_characters>
 
 # Requirements
 c++, and make, and g++ compiler.
