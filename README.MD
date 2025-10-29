@@ -20,10 +20,12 @@ This is because there are five words of size 2 in the input text, and “ab” a
 “ba” appears twice, while “ac” appears once.
 
 Here are the character transition frequencies:
-word    next    char frequency
-ab      a       1.0
-ba      b       0.5
-ba      c       0.5
+
+|word    |next    |char frequency|
+| ------ |:-------:|:-------:|
+|ab      |a       |1.0|
+|ba      |b       |0.5|
+|ba      |c       |0.5|
 
 However, if you notice in the repo there are animal .txt files which represent DNA sequences. If you are curious like myself, then you can see how this naive implementation can create experiments. For example for a given length of sequences recorded from a specific animal, is the distribution of the sequence similar or disimlar to another. Or given a distribution, and generation of new sequences, how likely is the new sequence to look like the original animal versus another. In other words a person with no DNA knowledge or biological knowledge can begin to experiment using computers.
 
