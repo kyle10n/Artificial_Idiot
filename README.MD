@@ -10,10 +10,11 @@ P (c|w) = n(w, c) / n(w)
 
 If the word sizing is = 2 and the input text is “ababac”, then the word frequencies are:
 
-word    frequency
-ab      0.2
-ba      0.2
-ac      0.1
+|word    |frequency|
+| ------ |:-------:|
+|ab      |0.2|
+|ba      |0.2|
+|ac      |0.1|
 
 This is because there are five words of size 2 in the input text, and “ab” and
 “ba” appears twice, while “ac” appears once.
