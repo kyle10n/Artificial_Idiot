@@ -37,12 +37,12 @@ download the repo and run
 then run your training txt file and word size, and how many words you would like to generate
 >./slm 2 ./text/ababac.txt 10
 
-slm [#of_word_size] [filename.txt] [#of_characters]
+slm <int #of_word_size> <string filename.txt> <int #of_characters>
 
 # Requirements
 c++, and make, and g++ compiler.
 
-Files and short Explanation
+## Files and short Explanation
 
 The training.cpp and training.h are files for training the model
 training class
@@ -57,12 +57,10 @@ inferencing class
     take number of words to generate as given
     generate a random words based on the model
 
-
 main code to command the command line
     take user commands
     make a training model with user commands
     create an inferencing model with user commands
     call the inference N times
-
 
 make code to make the entire process

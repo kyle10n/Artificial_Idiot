@@ -15,23 +15,12 @@ string Inference::generate(size_t max_length, size_t n)
     while (output.size() < max_length)
     {
         char next = pick_next(context);
-        string new_ngram = context.substr(1) + next;
+        output += next;
+        context = context.substr(1) + next;
 
-        string tmp;
-        if (!output.empty())
-            tmp += " ";
-        tmp += new_ngram;
-
-        output += tmp;
-        counter += tmp.size();
-
-        context = new_ngram;
     }
 
-    if (output.size() > max_length)
-        output = output.substr(0, max_length);
-
-    return output;
+    return output.substr(0, max_length);
 }
 
 Inference::Inference(const unordered_map<string, map<char, int>>& data) {
