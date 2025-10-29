@@ -17,12 +17,12 @@ string read_file(const string& filename) {
 
 int main(int argc, char *argv[]) {
     if (argc < 4) {
-        cerr << "Usage: " << argv[0] << " <input_file> <ngram_length> <output_length>\n";
+        cerr << "Usage: " << argv[0] << "<ngram_length> <input_file><output_length>\n";
         return 1;
     }
 
-    string input_data = read_file(argv[1]);
-    int n_gram_length = stoi(argv[2]);
+    int n_gram_length = stoi(argv[1]);
+    string input_data = read_file(argv[2]);
     int stringout = stoi(argv[3]);
 
     Training model(input_data, n_gram_length);
