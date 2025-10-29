@@ -7,12 +7,12 @@ Training::Training(string data_input, int ngram_length) {
 }
 
 void Training::learn_from_data(const string& data_input, int ngram_length) {
-    for (int i = 0; i + ngram_length < (int)data_input.size(); ++i) {
+    int limit = data_input.size() - ngram_length;
+    
+    for (int i = 0; i < limit; ++i) {
         string key = data_input.substr(i, ngram_length);
         char next = data_input[i + ngram_length];
-        auto& entry = ngrams[key];
-        entry.count++;
-        entry.next_char[next]++;
+        ngrams[key].next_char[next]++;
     }
 }
 

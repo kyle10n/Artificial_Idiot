@@ -11,9 +11,8 @@ string Inference::generate(size_t max_length, size_t n)
 
     string context = random_context();
     string output = context;
-    size_t counter = output.size();
 
-    while (counter < max_length)
+    while (output.size() < max_length)
     {
         char next = pick_next(context);
         string new_ngram = context.substr(1) + next;
