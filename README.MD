@@ -35,6 +35,7 @@ download the repo and run
 
 # Commands: 
 then run your training txt file and word size, and how many words you would like to generate
+
 >./slm 2 ./text/ababac.txt 10
 
 slm <int #of_word_size> <string filename.txt> <int #of_characters>
