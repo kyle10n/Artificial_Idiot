@@ -12,6 +12,7 @@ void Training::learn_from_data(const string& data_input, int ngram_length) {
     for (int i = 0; i < limit; ++i) {
         string key = data_input.substr(i, ngram_length);
         char next = data_input[i + ngram_length];
+        
         ngrams[key].next_char[next]++;
     }
 }
