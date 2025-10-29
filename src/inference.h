@@ -9,7 +9,7 @@ class Inference {
 public:
     Inference(const unordered_map<string, map<char, int>>& data);
 
-    string generate(size_t length, size_t n);
+    string generate(size_t length);
 
 private:
     unordered_map<string, vector<pair<char, int>>> transitions;

@@ -27,5 +27,5 @@ int main(int argc, char *argv[]) {
 
     Training model(input_data, n_gram_length);
     Inference gen(model.get_data());
-    cout << gen.generate(output_length, n_gram_length) << endl;
+    cout << gen.generate(output_length) << endl;
 }

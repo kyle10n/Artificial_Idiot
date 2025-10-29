@@ -4,7 +4,7 @@
 #include "inference.h"
 using namespace std;
 
-string Inference::generate(size_t max_length, size_t n)
+string Inference::generate(size_t max_length)
 {
     if (transitions.empty())
         return "";
